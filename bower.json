@@ -1,0 +1,14 @@
+{
+  "name": "full-frontal",
+  "homepage": "https://iamjoshellis.com",
+  "authors": [
+    "Josh Ellis <iamjoshellis@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "normalize-css": "normalize.css#^4.1.1",
+    "jquery": ">= 1.9.0",
+    "susy": "^2.2.12"
+  }
+}

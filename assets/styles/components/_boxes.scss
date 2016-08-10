@@ -1,0 +1,13 @@
+.box {
+	color: map-get($grays, white);
+	padding: 1.5em;
+	* {
+		padding: 0;
+	}
+}
+
+@each $color-name, $color-value in $colors {
+	.box--#{$color-name} {
+		background: $color-value;
+	}
+}
