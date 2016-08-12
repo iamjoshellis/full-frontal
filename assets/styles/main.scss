@@ -5,22 +5,25 @@
 @import "../../bower_components/susy/sass/_susy.scss";
 // endbower
 
-@import "mixins/aspect-ratio";
-@import "mixins/bg-gradient";
-@import "mixins/box-shadow";
-@import "mixins/clearfix";
-@import "mixins/font-sizes";
-@import "mixins/lists";
-@import "mixins/media-queries";
-@import "mixins/reset";
+@import "_mixins/aspect-ratio";
+@import "_mixins/bg-gradient";
+@import "_mixins/box-shadow";
+@import "_mixins/clearfix";
+@import "_mixins/font-sizes";
+@import "_mixins/lists";
+@import "_mixins/media-queries";
+@import "_mixins/reset";
 
+@import "common/forms";
 @import "common/global";
+@import "common/grid";
+@import "common/type";
 
 @import "components/boxes";
 @import "components/buttons";
-@import "components/forms";
-@import "components/grid";
 @import "components/navs";
-@import "components/type";
+
+@import "layouts/header";
+@import "layouts/footer";
 
 @import "views/home";

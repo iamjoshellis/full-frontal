@@ -5,7 +5,7 @@
 }
 
 @mixin screen-below($screen-size) {
-  @media screen and (max-width: ($screen-size - 0.0625em)) {
+  @media screen and (max-width: ($screen-size - 1px)) {
     @content;
   }
 }
