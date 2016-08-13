@@ -18,7 +18,7 @@ $grays: (
 $colors: (
   info            : #3498db,
   success         : #2ecc71,
-  alert           : #f39c12,
+  warning         : #f39c12,
   error           : #c0392b
 );
 
@@ -105,7 +105,7 @@ $box-shadow-dark: rgba(25,25,25,0.5);
  * Animations & Transitions
  */
 
-$btn-transistion-time: 300ms;
+$btn-transistion-time: 200ms;
 $link-transistion-time: 300ms;
 
 /**

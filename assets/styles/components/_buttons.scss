@@ -7,8 +7,11 @@
 	border-radius: 0.375em;
 	cursor: pointer;
 	position: relative;
+	text-transform: uppercase;
+  transition: transform, background, $btn-transistion-time ease-out;
 	&:hover {
 		color: map-get($grays, white);
+		transform: translateY(-0.125em);
 	}
 	&:active {
 		transform: translateY(0.125em);
@@ -18,29 +21,23 @@
 @each $color-name, $color-value in $colors {
 	.btn--#{$color-name} {
 		background: $color-value;
-    box-shadow: 0 0.375em darken($color-value, 5%);
 		&:hover,
 		&:focus {
-			background: darken($color-value, 2.5%);
-			box-shadow: 0 0.375em darken($color-value, 7.5%);
+			background: darken($color-value, 5%);
 		}
 		&:active {
-			background: darken($color-value, 5%);
-			box-shadow: 0 0.375em darken($color-value, 10%);
+			background: darken($color-value, 10%);
 		}
 	}
 }
 
 .btn--disabled {
 	background: map-get($grays, light);
-	box-shadow: 0 0.375em darken(map-get($grays, base), 5%);
 	&:hover,
 	&:focus {
-		background: darken(map-get($grays, light), 2.5%);
-		box-shadow: 0 0.375em darken(map-get($grays, base), 7.5%);
+		background: darken(map-get($grays, light), 5%);
 	}
 	&:active {
-		background: darken(map-get($grays, light), 5%);
-		box-shadow: 0 0.375em darken(map-get($grays, base), 10%);
+		background: darken(map-get($grays, light), 10%);
 	}
 }
