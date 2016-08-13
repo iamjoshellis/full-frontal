@@ -115,11 +115,6 @@
                     "name": "ordered-list",
                     "title": "Ordered List",
                     "width": "half"
-                },
-                {
-                    "group": "typography",
-                    "name": "code",
-                    "title": "Code"
                 }
             ]
         },
@@ -129,14 +124,26 @@
             "components": [
                 {
                     "group": "buttons",
-                    "name": "read-more",
-                    "title": "Read More Button",
+                    "name": "info",
+                    "title": "Button Info",
                     "width": "half"
                 },
                 {
                     "group": "buttons",
-                    "name": "link",
-                    "title": "Link Button",
+                    "name": "success",
+                    "title": "Button Success",
+                    "width": "half"
+                },
+                {
+                    "group": "buttons",
+                    "name": "warning",
+                    "title": "Button Warning",
+                    "width": "half"
+                },
+                {
+                    "group": "buttons",
+                    "name": "error",
+                    "title": "Button Error",
                     "width": "half"
                 }
             ]
