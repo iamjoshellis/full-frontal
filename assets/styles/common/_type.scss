@@ -32,20 +32,19 @@ p {
   padding: .5em 0;
 }
 
-.small {
+.type--small {
   font-size: $font-size-small;
 }
 
-.large {
+.type--large {
   font-size: $font-size-large;
 }
 
 ol, ul, dl {
   list-style-type: none;
-  margin: .5em 1.5em;
+  margin: .5em 0;
   line-height: $line-height-default;
 }
-
 
 li {
   padding: .25em 0 .25em 1.25em;
@@ -113,20 +112,19 @@ blockquote {
     padding-top: 1em;
     color: map-get($grays, light);
     &:before {
-      content: "- ";
+      content: "~ ";
     }
   }
 }
 
 aside {
-  font-family: $font-family-serif;
-  font-weight: bold;
+  font-family: $font-family-sans;
   font-style: italic;
   margin: 0;
   padding: 1em 0;
   text-align: center;
   color: map-get($colors, info);
-  @include font-size($h2-font-sizes);
+  @include font-size($h3-font-sizes);
 }
 
 code {
