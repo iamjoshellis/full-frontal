@@ -1,0 +1,51 @@
+{
+  "viewports": [
+    {
+      "name": "phone",
+      "width": 320,
+      "height": 480
+    },
+    {
+      "name": "tablet_v",
+      "width": 568,
+      "height": 1024
+    },
+    {
+      "name": "tablet_h",
+      "width": 950,
+      "height": 713
+    }
+  ],
+  "scenarios": [
+    {
+      "label": "Patterns",
+      "url": "http://127.0.0.1:8080/pattern-library/",
+      "hideSelectors": [],
+      "removeSelectors": [".ndpl-sidebar"],
+      "selectors": [
+        "#group-typography-component-headings .ndpl-component__sample",
+        "#group-typography-component-paragraphs .ndpl-component__sample",
+        "#group-typography-component-blockquotes .ndpl-component__sample",
+        "#group-typography-component-aside .ndpl-component__sample",
+        "#group-typography-component-unordered-list .ndpl-component__sample",
+        "#group-typography-component-ordered-list .ndpl-component__sample"
+      ],
+      "readyEvent": null,
+      "delay": 5000,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "onBefore.js",
+      "onReadyScript": "onReady.js"
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "../../backstop_data/bitmaps_reference",
+    "bitmaps_test": "../../backstop_data/bitmaps_test",
+    "compare_data": "../../backstop_data/bitmaps_test/compare.json",
+    "casper_scripts": "../../backstop_data/casper_scripts"
+  },
+  "engine": "phantomjs",
+  "report": ["CLI", "browser"],
+  "casperFlags": [],
+  "debug": false,
+  "port": 3002
+}
