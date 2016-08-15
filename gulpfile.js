@@ -19,6 +19,7 @@ var runSequence  = require('run-sequence');
 var sass         = require('gulp-sass');
 var sourcemaps   = require('gulp-sourcemaps');
 var uglify       = require('gulp-uglify');
+var chug         = require('gulp-chug');
 
 // See https://github.com/austinpray/asset-builder
 var manifest = require('asset-builder')('./assets/manifest.json');
@@ -244,7 +245,11 @@ gulp.task('clean', require('del').bind(null, [path.dist]));
 // See: http://www.browsersync.io
 gulp.task('watch', function() {
   browserSync.init({
-    files: ['*.html', 'pattern-library/data.json', 'pattern-library/components/**/**/*.html'],
+    files: [
+      '*.html',
+      'pattern-library/data.json',
+      'pattern-library/components/**/**/*.html'
+    ],
     proxy: config.devUrl
   });
   gulp.watch([path.source + 'styles/**/*'], ['styles']);
@@ -281,4 +286,22 @@ gulp.task('wiredep', function() {
 // `gulp` - Run a complete build. To compile for production run `gulp --production`.
 gulp.task('default', ['clean'], function() {
   gulp.start('build');
+});
+
+// ### BackstopJS
+// gulp chug (BackstopJS: $ gulp reference)
+gulp.task('reference', function() {
+  gulp.start('build');
+  gulp.src('./node_modules/backstopjs/gulpfile.js')
+  .pipe(chug({
+    tasks:  ['reference']
+  }));
+});
+
+gulp.task('test', function() {
+  gulp.start('build');
+  gulp.src('./node_modules/backstopjs/gulpfile.js')
+  .pipe(chug({
+    tasks:  ['test']
+  }));
 });
