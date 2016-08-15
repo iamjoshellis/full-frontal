@@ -70,6 +70,39 @@ The default is `http://127.0.0.1:8080` which should work with the default `http-
 You're done! (Assuming the packages `bower.json` file is correctly set up).
 More info - [Bower docs](https://bower.io/docs/api/).
 
+## Visual Regression Testing
+
+Do super fancy visual diffs on element selectors, to make sure your css hasn't broken some other css!
+
+### Install PhantomJS and CasperJS Globally
+
+Currently requires global install, will try to simplify this in future...
+```bash
+npm i phantomjs casperjs -g
+```
+
+### Config
+
+First set the test url and selectors in `scenarios` array in `backstop.json`.
+```json
+...
+"scenarios": [
+  {
+    "url": "http://127.0.0.1:8080/pattern-library/",
+    "selectors": [
+      "#group-typography-component-headings .ndpl-component__sample"
+    ],
+  }
+],
+...
+```
+The default is set to use the default `http-server` address, so start that (or your custom webserver) first.
+
+### Setting References and Running Tests
+
+* `gulp reference` — Sets the current appearance of selectors as the reference.
+* `gulp test` — Runs visual regression tests against references with visual diffs in a web browser.
+
 ## Contributing
 
 Contributions are welcome from everyone. We have [contributing guidelines](CONTRIBUTING.md) to help you get started.
